@@ -19,7 +19,8 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20.x
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Build Picotool
         run: ./build.sh
@@ -33,4 +34,4 @@ jobs:
       - name: Publish to NPM
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        run: npm publish --access public
+        run: yarn publish --access public

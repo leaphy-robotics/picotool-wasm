@@ -403,6 +403,11 @@ emoji-regex@^9.2.2:
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-9.2.2.tgz#840c8803b0d8047f4ff0cf963176b32d4ef3ed72"
   integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
 
+esbuild-plugin-replace-regex@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/esbuild-plugin-replace-regex/-/esbuild-plugin-replace-regex-0.0.2.tgz#30eaaeb35aeba65edc5c452c20751d59d78c4851"
+  integrity sha512-kU3zfnr7cNMC5S0xIY+RdiFcJrUr1P892QAdFsD3FSefUk0C6rEWb1Oz/paRbwrU73x+Bu9YiwoenbtqSmtykg==
+
 esbuild@^0.19.2:
   version "0.19.12"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.19.12.tgz#dc82ee5dc79e82f5a5c3b4323a2a641827db3e04"

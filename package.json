@@ -1,6 +1,6 @@
 {
   "name": "@leaphy-robotics/picotool-wasm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -22,6 +22,7 @@
     "url": "https://github.com/leaphy-robotics/picotool-wasm/issues"
   },
   "devDependencies": {
+    "esbuild-plugin-replace-regex": "^0.0.2",
     "tsup": "^8.0.2",
     "typescript": "^5.4.2"
   }

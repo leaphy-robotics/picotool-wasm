@@ -1,0 +1,17 @@
+diff --git a/src/host/pico_platform/include/pico/platform.h b/src/host/pico_platform/include/pico/platform.h
+index f9a7308..a6dbc08 100644
+--- a/src/host/pico_platform/include/pico/platform.h
++++ b/src/host/pico_platform/include/pico/platform.h
+@@ -11,12 +11,6 @@
+ #include <stdint.h>
+ #include <stddef.h>
+ 
+-#ifdef __unix__
+-
+-#include <sys/cdefs.h>
+-
+-#endif
+-
+ #ifdef __cplusplus
+ extern "C" {
+ #endif

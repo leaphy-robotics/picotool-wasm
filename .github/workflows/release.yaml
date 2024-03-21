@@ -1,0 +1,35 @@
+name: Build avrdude with Emscripten
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Emscripten
+        uses: mymindstorm/setup-emsdk@v14
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build Picotool
+        run: ./build.sh
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build NPM Module
+        run: yarn build
+
+      - name: Publish to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        run: npm publish --access public

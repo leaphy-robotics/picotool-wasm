@@ -21,7 +21,7 @@ cd ${SOURCE}
 
 mkdir picotool/build && cd picotool/build
 export PICO_SDK_PATH=${SOURCE}/pico-sdk
-emcmake cmake .. -DLIBUSB_INCLUDE_DIR=${SOURCE}/libusb/build/include/libusb-1.0 -DLIBUSB_LIBRARIES=${SOURCE}/libusb/build/lib/libusb-1.0.a -DCMAKE_EXE_LINKER_FLAGS='--bind -s ASYNCIFY -s ALLOW_MEMORY_GROWTH -s INVOKE_RUN=0 -s EXPORTED_RUNTIME_METHODS="[\"callMain\", \"FS\"]" -pthread -mbulk-memory -s EXPORT_ES6 -s MODULARIZE=1 -sFORCE_FILESYSTEM -sEXIT_RUNTIME=1' -DCMAKE_C_FLAGS="-pthread -mbulk-memory" -DCMAKE_CXX_FLAGS="-pthread -mbulk-memory"
+emcmake cmake .. -DLIBUSB_INCLUDE_DIR=${SOURCE}/libusb/build/include/libusb-1.0 -DLIBUSB_LIBRARIES=${SOURCE}/libusb/build/lib/libusb-1.0.a -DCMAKE_EXE_LINKER_FLAGS='--bind -s ASYNCIFY -s ALLOW_MEMORY_GROWTH -s INVOKE_RUN=0 -s EXPORTED_RUNTIME_METHODS="[\"callMain\", \"FS\"]" -pthread -mbulk-memory -s EXPORT_ES6 -s MODULARIZE=1 -sFORCE_FILESYSTEM -sEXIT_RUNTIME=1 -O1' -DCMAKE_C_FLAGS="-pthread -mbulk-memory" -DCMAKE_CXX_FLAGS="-pthread -mbulk-memory"
 emmake make -j8
 
 cd ${SOURCE}

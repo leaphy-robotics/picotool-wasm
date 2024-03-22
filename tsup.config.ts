@@ -15,7 +15,7 @@ export default defineConfig({
     esbuildPlugins: [
         replace({
             patterns: [
-                [/ENVIRONMENT_IS_NODE(?! =)/g, 'false'],
+                [/ENVIRONMENT_IS_NODE(?!=)/g, 'false'],
             ]
         })
     ]

@@ -2,8 +2,8 @@ import { defineConfig } from 'tsup'
 import replace from 'esbuild-plugin-replace-regex'
 
 export default defineConfig({
-    target: 'es2020',
-    format: ['cjs', 'esm'],
+    target: 'esnext',
+    format: ['esm'],
     splitting: false,
     sourcemap: true,
     clean: true,

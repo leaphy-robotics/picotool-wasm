@@ -35,7 +35,7 @@ export default class PicoTool {
         module.FS.writeFile('sketch.uf2', sketch)
 
         return Promise.race([
-            new Promise<void>((_resolve, reject) => setTimeout(() => reject(this.logs), 5000)),
+            new Promise<void>((_resolve, reject) => setTimeout(() => reject(this.logs), 30000)),
             new Promise<void>((resolve) => {
                 this.onDone = resolve
                 this.logs = ''

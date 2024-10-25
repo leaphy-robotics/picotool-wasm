@@ -1,9 +1,9 @@
 {
   "name": "@leaphy-robotics/picotool-wasm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "types": "dist/index.d.mts",
   "license": "LGPL-3.0-only",
   "files": [
     "dist",
